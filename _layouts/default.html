@@ -1,11 +1,70 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+    <script src="assets/js/random_header_image.js"></script>
   </head>
   <body>
-    {% include navigation.html %}
-    {{ content }}
+    <div id="site_header" class="frame_row">
+      <div id="site_logo_text">
+        <h1>{{ page.title }}</h1>
+      </div>
+      <div class="spacer"></div>
+      <div id="site_logo_image">
+        <img id="header_image" src=""/></img>
+      </div>
+    </div>
+
+    <div id="topbar">
+      {% include topbar.html %}
+    </div>
+
+    <div class="frame_row">
+      <div id="sidebar">
+        {% include sidebar.html %}
+      </div>
+      <div id="content" class="backing">
+        <p>Content goes here!</p>
+      </div>
+    </div>
+
+    <br/>
+
+    <div id="footer" class="backing">
+      <div class="content_header">
+        <div>
+          <img class="left" src="assets/images/vinegrowing.gif"/>
+        </div>
+        <div class="center">
+          <h2>Other cool people!</h2>
+        </div>
+        <div>
+          <img class="right" src="assets/images/vinegrowing.gif" />
+        </div>
+      </div>
+
+      <div class="centered_links">
+        <a href="https://rena.talkhaus.com">Super duper girlfriends page <img src="assets/images/purpleflower.gif"/></a>
+        |
+        <a href="">some other person</a>
+        |
+        <a href="">and another person</a>
+      </div>
+
+    </div>
+    <br/>
+    <div class="backing">
+      <p align="center">You are our <script type="text/javascript" src="//counter.websiteout.net/js/24/0/0/0"></script> visitor!</p>
+    </div>
+    <script>
+      document.getElementById("header_image").src = random_header_image();
+    </script>
   </body>
 </html>

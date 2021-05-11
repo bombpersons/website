@@ -1,0 +1,173 @@
+html {
+  height: 100%;
+}
+
+body {
+  color: white;
+  background: linear-gradient(rgba(87, 86, 0, 0.78), rgba(72, 37, 16, 1)),
+                    url("../images/bg.jpg");
+  background-attachment: fixed;
+
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+@media (max-width: 800px) {
+  body {
+    width: 100%;
+  }
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Itim', cursive;
+}
+
+a {
+  color: #ffcb00;
+  text-transform: uppercase;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: Yellow;
+}
+
+a:visited {
+  color: Yellow;
+}
+
+table {
+  padding: 5px;
+}
+
+table.topbar td {
+  background-color: rgba(255, 200, 100, 0.6);
+  border-width: 0px;
+  border-color: black;
+  border-style:solid
+}
+
+table.sidebar td {
+  text-align: center;
+  background-color: rgba(255, 200, 100, 0.6);
+  border-width: 0px;
+  border-color: black;
+  border-style:solid;
+}
+
+.mirrored, .content_header img.right {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.backing {
+  background-color: rgba(255, 200, 100, 0.1);
+  border-width: 0px;
+  border-color: black;
+  border-style:solid;
+}
+
+.content_header{
+  display: flex;
+  justify-content: center;
+}
+
+.content_header div {
+  overflow: hidden;
+}
+
+.content_header img.left img.right {
+  flex: 1 1 auto;
+}
+
+.content_header img.left {
+}
+
+.content_header img.right {
+  float: right;
+}
+
+.content_header .center {
+  text-align: center;
+  flex: 0 0 content;
+  padding: 0 30px;
+}
+
+.frame_row {
+  display: flex;
+}
+
+.column {
+
+}
+
+.spacer {
+  flex: 50px;
+}
+
+#site_header {
+
+}
+
+#site_logo_text {
+  flex: initial;
+}
+
+#site_logo_text h1 {
+  white-space:nowrap;
+  font-size: 50pt;
+  font-family: 'Fascinate', cursive;
+}
+
+@media (max-width: 800px) {
+  #site_logo_text h1 {
+    font-size: 25pt;
+      white-space: normal;
+  }
+}
+
+#site_logo_image {
+  flex: auto;
+}
+
+#topbar {
+
+}
+
+#topbar a {
+  display: inline;
+  background-color: rgba(255, 200, 100, 0.6);
+  padding: 0px 5px;
+}
+
+#sidebar {
+  flex: auto;
+  min-width: 200px;
+}
+
+@media (max-width: 800px) {
+  #sidebar {
+    display: none;
+  }
+}
+
+#content {
+  flex: 80%;
+}
+
+#footer {
+
+}
+
+.centered_links {
+  text-align: center;
+}
