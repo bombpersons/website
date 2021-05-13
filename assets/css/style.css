@@ -5,7 +5,7 @@ html {
 body {
   color: white;
   background: linear-gradient(rgba(87, 86, 0, 0.78), rgba(72, 37, 16, 1)),
-                    url("../images/bg.jpg");
+                    url("/assets/images/bg.jpg");
   background-attachment: fixed;
 
   width: 80%;
@@ -45,26 +45,7 @@ a:visited {
   color: Yellow;
 }
 
-table {
-  padding: 5px;
-}
-
-table.topbar td {
-  background-color: rgba(255, 200, 100, 0.6);
-  border-width: 0px;
-  border-color: black;
-  border-style:solid
-}
-
-table.sidebar td {
-  text-align: center;
-  background-color: rgba(255, 200, 100, 0.6);
-  border-width: 0px;
-  border-color: black;
-  border-style:solid;
-}
-
-.mirrored, .content_header img.right {
+.mirrored, .fancy_header img.right {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
@@ -76,27 +57,27 @@ table.sidebar td {
   border-style:solid;
 }
 
-.content_header{
+.fancy_header{
   display: flex;
   justify-content: center;
 }
 
-.content_header div {
+.fancy_header div {
   overflow: hidden;
 }
 
-.content_header img.left img.right {
+.fancy_header img.left img.right {
   flex: 1 1 auto;
 }
 
-.content_header img.left {
+.fancy_header img.left {
 }
 
-.content_header img.right {
+.fancy_header img.right {
   float: right;
 }
 
-.content_header .center {
+.fancy_header .center {
   text-align: center;
   flex: 0 0 content;
   padding: 0 30px;
@@ -151,7 +132,18 @@ table.sidebar td {
 
 #sidebar {
   flex: auto;
+  padding: 5px;
   min-width: 200px;
+  align-items: center;
+}
+
+#sidebar a {
+  display: block;
+  background-color: rgba(255, 200, 100, 0.6);
+}
+
+ul.sidebar {
+
 }
 
 @media (max-width: 800px) {
@@ -162,6 +154,7 @@ table.sidebar td {
 
 #content {
   flex: 80%;
+  padding: 5px;
 }
 
 #footer {
