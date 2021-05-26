@@ -13,24 +13,24 @@
   </head>
   <body>
     <div id="site_header" class="frame_row">
+      <!-- <img id="header_image" src=""/></img> -->
       <div id="site_logo_text">
-        <h1>Bomb's Emporium</h1>
-      </div>
-      <div class="spacer"></div>
-      <div id="site_logo_image">
-        <img id="header_image" src=""/></img>
+        <h1><a href='/'> Bomb's Emporium</a></h1>
       </div>
     </div>
 
     <div id="topbar">
+      <a class="sidebar_toggle" href="javascript:void(0)" onclick="toggleSidebar()">toggle sidebar</a>
       {% include topbar.html %}
     </div>
 
-    <div class="frame_row">
-      <div id="sidebar">
+    <br/>
+
+    <div class="with-sidebar">
+      <div id="sidebar" class="sidebar">
         {% include sidebar.html %}
       </div>
-      <div id="content" class="backing">
+      <div class="content backing">
         {% include fancy_header.html header=page.title %}
         {{ content }}
       </div>
@@ -56,6 +56,15 @@
     </div>
     <script>
       document.getElementById("header_image").src = random_header_image();
+
+      function toggleSidebar() {
+        let sidebar = document.getElementById("sidebar");
+        if (sidebar.style.display === "none") {
+          sidebar.style.display = "";
+        } else {
+          sidebar.style.display = "none";
+        }
+      }
     </script>
   </body>
 </html>
