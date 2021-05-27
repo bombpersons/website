@@ -1,10 +1,21 @@
-function random_header_image() {
+function set_random_header_image(logo_text) {
   var images = new Array(
-    "/assets/images/header_images/rose.gif",
-    "/assets/images/header_images/Blue_Dripping_Flowers.gif",
-    "/assets/images/header_images/valentin.gif"
+    "plant_bomb.gif",
+    "spinning_bomb.gif",
+    /*"exploding_bomb.gif",*/ // Too tall =(
+    "explosion.gif",
+    "explosion2.gif"
   );
 
   var randomNum = Math.floor(Math.random() * images.length);
-  return images[randomNum];
+  let img = new Image();
+  console.log("Loading random image: " + images[randomNum]);
+
+  img.onload = function() {
+    console.log("Loaded random image: " + img.src);
+
+    logo_text.style.backgroundImage = `url('${img.src}')`;
+    logo_text.style.paddingLeft = `${img.width + 10}px`;
+  };
+  img.src = `/assets/images/header_images/${images[randomNum]}`;
 }

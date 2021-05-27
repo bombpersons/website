@@ -23,14 +23,20 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-h2 {
-  text-align: center;
+h1 {
   font-family: 'Itim', cursive;
+}
+
+h2 {
+  font-family: 'Itim', cursive;
+  background-image: url("/assets/images/header_prefix.gif");
+  background-repeat: no-repeat;
+  padding-left: 40px;
+  padding-bottom: 20px;
 }
 
 a {
   color: #ffcb00;
-  text-transform: uppercase;
 }
 
 a:hover {
@@ -91,19 +97,32 @@ a:visited {
   align-items: flex-start;
 }
 
+/*
 .with-sidebar > * > * {
   margin: 0.5rem;
 }
+*/
 
 .with-sidebar .sidebar {
   /*flex-basis: 20rem;*/
   flex-grow: 1;
+  margin: 0.5rem;
 }
 
 .with-sidebar .content {
   flex-basis: 0;
   flex-grow: 999;
+  margin: 0.5rem;
+  padding: 0.5rem;
   min-width: calc(50% - 1rem);
+}
+
+.content h3 {
+  margin-left: 1.5rem;
+}
+
+.content p {
+  margin-left: 3.0rem;
 }
 
 .spacer {
@@ -114,34 +133,33 @@ a:visited {
 
 }
 
-#site_header a {
+a.stealth {
   color: white;
   text-decoration: none;
 }
 
-#site_header a:hover {
+a.stealth:hover {
 }
 
-#site_header a:active {
+a.stealth:active {
   color: white;
 }
 
-#site_header a:visited {
+a.stealth:visited {
   color: white;
 }
 
 #site_logo_text {
-  flex: initial;
-}
-
-#site_logo_text h1 a {
   white-space:nowrap;
   font-size: 50pt;
   font-family: 'Fascinate', cursive;
+  background-repeat: no-repeat;
+  margin: 0px
+
 }
 
 @media (max-width: 800px) {
-  #site_logo_text h1 {
+  #site_logo_text {
     font-size: 25pt;
       white-space: normal;
   }
@@ -181,6 +199,17 @@ a.sidebar_toggle {
 
 .sidebar a.link_2 {
 
+}
+
+.author {
+  text-align: center;
+}
+
+.post {
+}
+
+.pagination {
+  text-align: center;
 }
 
 #footer {

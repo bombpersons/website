@@ -3,7 +3,18 @@
     <img class="left" src="/assets/images/whiteflowerheader.gif"/>
   </div>
   <div class="center">
-    <h2>{{ include.header }}</h2>
+    {% if include.link %}
+    <a class="stealth" href={{ include.link }}>
+      <h1>
+        {{ include.header }}
+      </h1>
+    </a>
+    {% else %}
+    <h1>
+      {{ include.header }}
+    </h1>
+    {% endif %}
+
   </div>
   <div>
     <img class="right" src="/assets/images/whiteflowerheader.gif" />

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+{% include fancy_header.html header=page.title %}
+<div class="post">
+  <div class="author">
+    <span class="date">{{ page.date | date_to_string: "ordinal" }}</span>
+  </div>
+  <div class="post_content">
+    {{ content }}
+  </div>
+</div>

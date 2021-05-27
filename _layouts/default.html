@@ -9,19 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
-    <script src="assets/js/random_header_image.js"></script>
+    <script src="/assets/js/random_header_image.js"></script>
   </head>
   <body>
-    <div id="site_header" class="frame_row">
-      <!-- <img id="header_image" src=""/></img> -->
-      <div id="site_logo_text">
-        <h1><a href='/'> Bomb's Emporium</a></h1>
-      </div>
+    <div id="site_header">
+      <img id="header_image" src=""/></img>
+      <a class="stealth" href='/'><h1 id="site_logo_text"> Bomb's Emporium</h1></a>
     </div>
 
     <div id="topbar">
       <a class="sidebar_toggle" href="javascript:void(0)" onclick="toggleSidebar()">toggle sidebar</a>
-      {% include topbar.html %}
+      <!-- {% include topbar.html %} -->
     </div>
 
     <br/>
@@ -31,7 +29,6 @@
         {% include sidebar.html %}
       </div>
       <div class="content backing">
-        {% include fancy_header.html header=page.title %}
         {{ content }}
       </div>
     </div>
@@ -55,8 +52,8 @@
       <p align="center">You are our <script type="text/javascript" src="//counter.websiteout.net/js/24/0/0/0"></script> visitor!</p>
     </div>
     <script>
-      document.getElementById("header_image").src = random_header_image();
-
+      set_random_header_image(document.getElementById("site_logo_text"));
+      
       function toggleSidebar() {
         let sidebar = document.getElementById("sidebar");
         if (sidebar.style.display === "none") {
